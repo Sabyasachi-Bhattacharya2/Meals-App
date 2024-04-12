@@ -27,7 +27,7 @@ async function searchBar(str) {
     console.log(searchJson);   
     if(searchJson) {
         const meals = searchJson.meals;
-        const filterMatch = meals.filter(meal => meal.strMeal.toLowerCase().includes(str));
+        const filterMatch = meals.filter(meal => meal.strMeal.toLowerCase().includes(str.toLowerCase()));
         createDropdown(filterMatch);
         console.log(filterMatch);
     } 
